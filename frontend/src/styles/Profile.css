@@ -1,0 +1,81 @@
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.profile-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.profile-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-info div {
+  background-color: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  color: #333;
+}
+
+.profile-section-title {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.progress-card {
+  background-color: #f0f4f8;
+  padding: 1rem;
+  border-left: 4px solid #4a90e2;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-card h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.progress-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .profile-info {
+    grid-template-columns: 1fr;
+  }
+}

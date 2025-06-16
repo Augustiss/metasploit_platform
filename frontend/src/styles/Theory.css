@@ -1,0 +1,33 @@
+.theory-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.topic-section {
+  margin-bottom: 1rem;
+}
+
+.topic-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.chapter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 1rem;
+}
+
+.chapter-list li button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.5rem 0;
+}

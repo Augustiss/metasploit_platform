@@ -1,0 +1,23 @@
+.chapter-card {
+  background-color: #1f2937;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.chapter-card:hover {
+  transform: scale(1.02);
+}
+
+.chapter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
