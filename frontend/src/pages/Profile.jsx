@@ -19,10 +19,10 @@ function Profile() {
 
     try {
       const [userRes, progressRes] = await Promise.all([
-        axios.get('http://localhost:8000/users/me', {
+        axios.get('http://161.35.18.245:8000/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         }),
-        axios.get('http://localhost:8000/progress/user-progress', {
+        axios.get('http://161.35.18.245:8000/progress/user-progress', {
           headers: { Authorization: `Bearer ${token}` },
         }),
       ]);
