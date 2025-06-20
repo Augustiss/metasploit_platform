@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="user_and_progress [2]" uuid="223a52e4-7efb-4fe2-a27d-5cbe5fc72b72">
+    <data-source source="LOCAL" name="metasploit_platform" uuid="a5450970-1586-4f63-8145-fdef0cb4859e">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\NamuDarbai\Desktopinis variantas\VU2\Kursinis darbas\backend\user_and_progress.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\NamuDarbai\Desktopinis variantas\VU2\Kursinis darbas\Metasploit_platform\backend\metasploit_platform.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>

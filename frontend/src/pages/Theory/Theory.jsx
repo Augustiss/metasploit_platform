@@ -1,3 +1,5 @@
+// file: src/pages/Theory/Theory.jsx
+
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../styles/Theory.css";
@@ -25,10 +27,11 @@ const Theory = () => {
   const topics = [
     {
       id: "topic1",
-      title: "Network Scanning",
+      title: "Metasploit Framework Fundamentals",
       chapters: [
-        { id: "chapter1", title: "Nmap Basics" },
-        { id: "chapter2", title: "Port Scanning Techniques" },
+        { id: "chapter1", title: "Introduction to Metasploit Framework" },
+        { id: "chapter2", title: "Navigation and Basic Commands in MSFconsole" },
+        { id: "chapter3", title: "MSFvenom Payload Creation" },
       ],
     },
     {

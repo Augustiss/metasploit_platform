@@ -1,4 +1,4 @@
-#/schemas/tasks.py
+#app/schemas/tasks.py
 
 from pydantic import BaseModel
 from typing import Optional
@@ -11,7 +11,7 @@ class TaskBase(BaseModel):
     note: Optional[str] = None
 
 class Task(TaskBase):
-    id: id
+    id: int
     correct_answer: str
 
     class Config:

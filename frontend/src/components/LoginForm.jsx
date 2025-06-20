@@ -1,3 +1,5 @@
+// file: src/components/LoginForm.jsx
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -6,9 +8,8 @@ function LoginForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false); // Add loading state
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-
 
   const handleLogin = async () => {
     if (isLoading) return; // Prevent multiple submissions
@@ -36,7 +37,7 @@ function LoginForm() {
 
       setMessage('Login successful!');
 
-      // Redirect to the profile page after a brief delay to show a success message
+      // Redirect to the profile page after a brief delay to show success message
       setTimeout(() => {
         navigate('/profile');
       }, 500);
@@ -44,17 +45,34 @@ function LoginForm() {
     } catch (err) {
       const detail = err.response?.data?.detail;
       if (Array.isArray(detail)) {
-        setMessage(`Error: ${detail[0].msg} → ${detail[0].loc?.join('.')}`);
+        setMessage(`Error: ${detail[0].msg}`);
       } else {
-        setMessage(`Error: ${detail || 'Login failed.'}`);
+        setMessage(detail || 'Login failed');
+        
+        // Handle account lockout
+        if (err.response?.status === 403) {
+          setIsLoading(true); // Keep form disabled
+          
+          // Auto re-enable form after timeout
+          if (detail.includes('minutes')) {
+            const minutes = parseInt(detail.match(/\d+/)[0]);
+            setTimeout(() => {
+              setIsLoading(false);
+              setMessage('');
+            }, minutes * 60 * 1000);
+          } else if (detail.includes('seconds')) {
+            const seconds = parseInt(detail.match(/\d+/)[0]);
+            setTimeout(() => {
+              setIsLoading(false);
+              setMessage('');
+            }, seconds * 1000);
+          }
+        } else {
+          setIsLoading(false);
+        }
       }
-    } finally {
-      setIsLoading(false); // End loading regardless of success/failure
     }
   };
-
-
-
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
@@ -64,6 +82,7 @@ function LoginForm() {
         placeholder="Enter your username"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        disabled={isLoading}
       />
 
       {/* Password Input */}
@@ -72,10 +91,17 @@ function LoginForm() {
         placeholder="Enter your password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        disabled={isLoading}
       />
 
       {/* Login Button */}
-      <button onClick={handleLogin}>Login</button>
+      <button 
+        onClick={handleLogin} 
+        disabled={isLoading}
+        style={{ opacity: isLoading ? 0.7 : 1 }}
+      >
+        {isLoading ? 'Please wait...' : 'Login'}
+      </button>
 
       {/* Feedback Message */}
       {message && (

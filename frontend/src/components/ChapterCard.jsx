@@ -1,3 +1,5 @@
+// File: src/components/ChapterCard.jsx
+
 import React from "react";
 import "../styles/ChapterCard.css";
 

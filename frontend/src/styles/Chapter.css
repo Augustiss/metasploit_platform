@@ -2,21 +2,36 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  font-family: Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .chapter-container h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: white;
+}
+
+.chapter-container h3 {
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.chapter-container h4 {
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
 }
 
 .chapter-container p {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .start-task-button {
-  background-color: #007bff;
+  background-color: #6366f1;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -26,5 +41,96 @@
 }
 
 .start-task-button:hover {
-  background-color: #0056b3;
+  background-color: #4f46e5;
+}
+
+.warning-box {
+  background-color: #1f2937;
+  border: 1px solid #333;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.warning-box h4,
+.warning-box p {
+  color: #fcd34d;
+  margin: 0;
+}
+
+.warning-box h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* ... existing CSS ... */
+
+.command-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background-color: #1e1e1e;
+  border-radius: 4px;
+}
+
+.command-table th,
+.command-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #333;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.command-table th {
+  background-color: #1f2937;
+  font-weight: 600;
+}
+
+.command-table code,
+.chapter-container code {
+  background-color: #2a2a2a;
+  color: #60a5fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.command-block {
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 1rem 0;
+  white-space: pre;
+  border: 1px solid #333;
+}
+
+.chapter-container h4 {
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.chapter-container ul li {
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.navigation-tips {
+  background-color: #1f2937;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.module-context-example {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #2a2a2a;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
 }

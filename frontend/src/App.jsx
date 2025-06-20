@@ -1,3 +1,5 @@
+// file: src/app.jsx
+
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
@@ -8,6 +10,7 @@ import Login from './pages/Login.jsx';
 import Profile from './pages/Profile.jsx';
 import Theory from './pages/Theory/Theory.jsx';
 import Chapter from "./pages/Theory/Chapter";
+import TaskSession from "./pages/Theory/TaskSession";
 
 
 function App() {
@@ -30,6 +33,7 @@ function App() {
           />
           <Route path="/theory" element={<Theory />} />
           <Route path="/chapter/:chapterId" element={<Chapter />} />
+          <Route path="/task-session/:id/:chapterId" element={<TaskSession />} />
           <Route path="/register" element={<Register onRegister={createUser} />} />
         </Routes>
       </Layout>

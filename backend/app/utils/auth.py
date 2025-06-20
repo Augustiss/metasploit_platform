@@ -9,7 +9,7 @@ from app.models.user import User
 from app.services.user_service import get_user_by_username
 
 # Configuration for JWT
-SECRET_KEY = "change-this-to-a-secure-secret"
+SECRET_KEY = "Yu9\R}:7b6avz>^_Jnk0H>`1YE<|NY"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 150  # Token validity in minutes
 
